@@ -1,0 +1,23 @@
+******************************* MANGAHERE ************************************************
+wget -q -U 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.6) Gecko/20070802 SeaMonkey/1.1.4' -O- http://www.mangahere.com/manga/the_gamer | grep the_gamer | head -5 | tail -1 | grep -oE c[0-9]\{1,4\} | sed 's/^c0\?//g'
+
+******************************* MANGAPANDA ***********************************************
+wget -O- -q http://www.mangapanda.com/the-gamer | grep the-gamer | head -2 | tail -1 | grep -oE [0-9]\{1,4\} | head -1
+
+******************************* MANGACOW *************************************************
+wget -O- -q http://mangacow.co/The-Gamer | grep The-Gamer | head -5 | tail -1 | grep -oE [0-9]\{,4\} | head -1
+
+******************************* MANGADEER *************************************************
+//
+
+******************************* MANGATOWN **************************************************
+wget -O- -q http://www.mangatown.com/manga/the_gamer | grep the_gamer | head -5 | tail -1 | grep -oE c[0-9]\{1,4\} | sed 's/^c0\?//g
+
+
+
+
+
+
+
+******************************** GROUPING **************************************************
+echo here in town | grep -oE 'here|town'
