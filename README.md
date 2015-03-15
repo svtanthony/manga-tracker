@@ -6,7 +6,7 @@ In the ***Links*** file we will need at least 3 fields separated by spaces. Firs
 ```
 the-breaker-new-waves 193 http://www.mangahere.co/manga/the_breaker_new_waves http://www.mangapanda.com/the-breaker-new-waves
 ```
-To check for *updates*, from the manga-tracker directory within a terminal type:  
+To check for *updates* of the tracked manga within ***Links***, from the manga-tracker directory within a terminal type:  
 `./update.sh`  
 
  To *download* the images of a specific chapter to most recent chapter type:
