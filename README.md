@@ -1,8 +1,8 @@
 # Manga-Tracker
-I like to read manga and I dislike to constantly search for updates to the manga series I'm reading. The solution was to either read less manga or automate the searching process, and you guessed correctly the serching process is now automated. With this script the user will receive an email (text messages can be encoded as email messages) when one of your favorite manga series update.  
+I enjoy reading manga; however I dislike to constantly search for updates to the manga series. The solution was to either read less manga or automate the searching process. And you guessed correctly, the serching process is now automated. With this script the user will receive an email (text messages can be encoded as email messages) when one of your favorite manga series update.  
 
 ##How to use
-In the ***Links*** file we will need at least 3 fields separated by spaces. First we need a name of the manga series to follow, second we need a chapter value less than or equal to the current chapter, and finally we links to the manga hosting websites. It should look something like this.  
+In the ***Links*** file we will need at least 3 fields separated by spaces. First we need a name of the manga series to follow. Second we need a chapter value less than or equal to the current chapter. Finally, we need links to the manga hosting websites. It should look something like this.  
 ```
 the-breaker-new-waves 193 http://www.mangahere.co/manga/the_breaker_new_waves http://www.mangapanda.com/the-breaker-new-waves
 ```
@@ -22,7 +22,7 @@ Install the `*NIX` packages below if not installed.
 `ssmtp` for those of us without a mail server.  
 `mailutils` for the mail functionallity.  
 
-What `ssmtp` simple way of getting mail off a system to your mail hub, so lets configure it. In the example below we will be using gmail as it is popular and easy to setup. Modify the file with sudo permission `/etc/ssmtp/ssmtp.conf` by adding the following lines:
+ `ssmtp` simple way of getting mail off a system to your mail hub, so lets configure it. In the example below we will be using gmail as it is popular and easy to setup. Modify the file with sudo permission `/etc/ssmtp/ssmtp.conf` by adding the following lines:
 
 ```
 mailhub=mailhub=smtp.gmail.com:587  
@@ -37,10 +37,19 @@ AuthPass=<GMAIL_PASSWORD>
 ```
 ####Scheduling
 To schedule we will use `crontab`, by setting it to run from 7:00 AM to 12:00 AM, every 15 minutes.  
-A crontab entry consists of the following.  
+A crontab entry consists of the following:  
 `minutes(0-59) hour(0-23) day_of_month(1-31) month(1-12) day_of_week(0-6) command_to_execute`
 
-we need to edit our crontab (`crontab -e`) entry and will need the following line appended to it.
+We need to edit our crontab entry (`crontab -e`) by appendeding the following:  
 ```
 */15 7-23 * * * /home/user/manga-tracker/update.sh
 ```
+
+## Limitations
+Only the following Manga Hosting sites can be used:  
+* http://www.mangahere.co  
+* http://www.mangatown.com  
+* http://www.mangapanda.com  
+* http://www.mangareader.net  
+* http://mangacow.co/  
+* More coming soon
