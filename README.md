@@ -1,5 +1,5 @@
 # Manga-Tracker
-This is a script to automate searching for manga updates, then sending an email notification when an update is found. This script also features download functionality.  
+This is a script to automate searching for manga updates, then sending an email notification when an update is found. This script also includes download functionality.  
 
 ##How to use
 * To check for *updates* of the tracked manga within `Links`, from the manga-tracker directory within a terminal type:  
