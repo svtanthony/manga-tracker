@@ -1,26 +1,22 @@
 # Manga-Tracker
-Script to automate searching for manga updates, then sending an email notifications when updates are found. Script also includes download features.  
+This is a script to automate searching for manga updates, then sending an email notification when update is found. This script also includes download functionalilty.  
 
 ##How to use
-The update and download processes of this script are dependant on the `update.sh` script file and the `Links` file. The `update.sh` requires that the user add the email address to send the updates to. The `Links` file we will need at least 3 fields separated by spaces. First we need a name of the manga series to follow. Second we need a chapter value less than or equal to the current chapter. Finally, we need links to the manga hosting websites. It should look something like this.  
+* To check for *updates* of the tracked manga within ***Links***, from the manga-tracker directory within a terminal type:  
+`./update.sh`  
+
+The `update.sh` requires that the user add the email address to send the updates to. The `Links` file we will need at least 3 fields separated by spaces. First we need a name of the manga series to follow. Second we need a chapter value less than or equal to the current chapter. Finally, we need links to the manga hosting websites. It should look something like this.  
 ```
 the-breaker-new-waves 193 http://www.mangahere.co/manga/the_breaker_new_waves http://www.mangapanda.com/the-breaker-new-waves
 ```
-* To check for *updates* of the tracked manga within ***Links***, from the manga-tracker directory within a terminal type:  
-`./update.sh`  
 
 * To *download* the images of a specific chapter to most recent chapter type:  
  `./update.sh <MANGA_LINK/Chapter>`  
  
-* To *download* all the recent releases of the tracked manga, change the the download enable option in the script. That way when there's an *update*, you will get a notification and download the images as well.  
+* To *download* all the recent releases of the tracked manga, change the the download enable option in the script. That way when there's an *update*, you will get a notifcation and download the images as well.  
  `downEn="true"`
  
-* To *automate*, look below in the scheduling section.  
- 
-##Installation
-Install the programs below if not installed. `Ssmtp` for those of us without a mail server. `Mailutils` for the mail functionallity.  
-
- `ssmtp` is a protocal to send mail from your system, so lets configure it. In the example below we will be using gmail as it is popular and easy to setup. Modify the file with sudo permission `/etc/ssmtp/ssmtp.conf` by adding the following lines: (**The email address and password need to be stored in plain text, as such , it is not recommended to use your email, but rather a spare email address.**)  
+* To *automate*, look below in the scheduling section.   following lines: (**The email address and password need to be stored in plain text, as such , it is not recommended to use your email, but rather an email for this specific purpose.**)  
 
 ```
 mailhub=mailhub=smtp.gmail.com:587  
