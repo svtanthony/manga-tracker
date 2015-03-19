@@ -11,11 +11,6 @@ This is a script to automate searching for manga updates, then sending an email 
 * To *download* all the recent releases of the tracked manga, change the the download enable option in the script. That way when there's an *update*, you will get a notifcation and download the images as well.  
  `downEn="true"`
 
-The `update.sh` requires that the user add the email address to send the updates to. The `Links` file we will need at least 3 fields separated by spaces. First we need a name of the manga series to follow. Second we need a chapter value less than or equal to the current chapter. Finally, we need links to the manga hosting websites. It should look something like this.  
-```
-the-breaker-new-waves 193 http://www.mangahere.co/manga/the_breaker_new_waves http://www.mangapanda.com/the-breaker-new-waves
-```
-
 * To *automate*, look below in the scheduling section.   following lines: (**The email address and password need to be stored in plain text, as such , it is not recommended to use your email, but rather an email for this specific purpose.**)  
 
 ```
@@ -29,6 +24,12 @@ UseSTARTTLS=YES
 AuthUser=<GMAIL_USERNAME>  
 AuthPass=<GMAIL_PASSWORD>  
 ```
+## Usage Details
+The `update.sh` requires that the user add the email address to send the updates to. The `Links` file we will need at least 3 fields separated by spaces. First we need a name of the manga series to follow. Second we need a chapter value less than or equal to the current chapter. Finally, we need links to the manga hosting websites. It should look something like this.  
+```
+the-breaker-new-waves 193 http://www.mangahere.co/manga/the_breaker_new_waves http://www.mangapanda.com/the-breaker-new-waves
+```
+
 ####Scheduling
 To schedule we will use `crontab`, by setting it to run from 7:00 AM to 12:00 AM, every 15 minutes.  
 We need to edit our crontab entry (`crontab -e`) by appendeding the following:  
