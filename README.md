@@ -2,7 +2,7 @@
 This is a script to automate searching for manga updates, then sending an email notification when an update is found. This script also features download functionality.  
 
 ##How to use
-* To check for *updates* of the tracked manga within ***Links***, from the manga-tracker directory within a terminal type:  
+* To check for *updates* of the tracked manga within `Links`, from the manga-tracker directory within a terminal type:  
 `./update.sh`  
 
 * To *download* the images of a specific chapter to most recent chapter type:  
@@ -21,7 +21,7 @@ the-breaker-new-waves 193 http://www.mangahere.co/manga/the_breaker_new_waves ht
 ##Installation
 Install the programs below if not installed. `Ssmtp` for those of us without a mail server. `Mailutils` for the mail functionallity.  
 
- `ssmtp` simple way of getting mail off a system to your mail hub, so lets configure it. In the example below we will be using gmail as it is popular and easy to setup. Modify the file with sudo permission `/etc/ssmtp/ssmtp.conf` by adding the following lines:
+`Ssmtp` is a protocal to send mail from your system, so lets configure it. In the example below we will be using gmail as it is popular and easy to setup. Modify the file with sudo permission `/etc/ssmtp/ssmtp.conf` by adding the following lines: (**The email address and password need to be stored in plain text, as such , it is not recommended to use your email, but rather an email specifically for this purpose.**)
 
 ```
 mailhub=mailhub=smtp.gmail.com:587  
@@ -34,7 +34,7 @@ UseSTARTTLS=YES
 AuthUser=<GMAIL_USERNAME>  
 AuthPass=<GMAIL_PASSWORD>  
 ```
-####Scheduling
+## Scheduling
 To schedule we will use `crontab`, by setting it to run from 7:00 AM to 12:00 AM, every 15 minutes.  
 We need to edit our crontab entry (`crontab -e`) by appendeding the following:  
 
