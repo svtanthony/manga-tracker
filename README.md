@@ -8,7 +8,7 @@ To check for *updates* of the tracked manga within `Links`, from the manga-track
 To *download* the images of a specific chapter to most recent chapter type:  
  `./update.sh <MANGA_LINK/Chapter>`  
  
-To *download* all the recent releases of the tracked manga, change the the download enable option in the script. That way when there's an *update*, you will get a notification and download the images as well.  
+To *download all* the recent releases of the tracked manga, change the the download enable option within `update.sh`. That way when there's an *update*, you will get a notification and download the images as well.  
  `downEn="true"`
  
 To *automate*, look below in the scheduling section.  
