@@ -13,7 +13,7 @@ To *download all* the recent releases of the tracked manga, change the the downl
  
 To *automate*, look below in the scheduling section.  
 
-The `Links` file we will need at least 3 fields separated by spaces. First we need the name of the manga series to follow. Second we need a chapter value less than or equal to the current chapter. Finally, we need links to the manga hosting websites. It should look something like this.  
+The `update.sh` script will require the user to set the email address to notify when updates are found. The `Links` file we will need at least 3 fields separated by spaces. First we need the name of the manga series to follow. Second we need a chapter value less than or equal to the current chapter. Finally, we need links to the manga hosting websites. It should look something like this.  
 ```
 the-breaker-new-waves 193 http://www.mangahere.co/manga/the_breaker_new_waves http://www.mangapanda.com/the-breaker-new-waves
 ``` 
