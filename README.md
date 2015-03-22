@@ -19,6 +19,11 @@ the-breaker-new-waves 193 http://www.mangahere.co/manga/the_breaker_new_waves ht
 ``` 
 
 ##Installation
+```
+1. $ git clone https://github.com/svtanthony/manga-tracker.git
+2. $ cd manga-tracker
+```
+
 Install the following programs if not installed. `Ssmtp` for those of us without a mail server. `Mailutils` for the mail functionallity.  
 
 `Ssmtp` is a protocal to send mail from your system, so lets configure it. In the example below we will be using gmail as it is popular and easy to setup. Modify the file with sudo permission `/etc/ssmtp/ssmtp.conf` by adding the following lines: (**The email address and password need to be stored in plain text, as such , it is not recommended to use your email, but rather an email specifically for this purpose.**)
